@@ -1,8 +1,8 @@
 const inp = document.querySelector('input')
 const ulElement = document.getElementById('todo-list')
-const btnElement = document.getElementById('submit-button')
+const submitBtnElement = document.getElementById('submit-button')
 
-btnElement.addEventListener('click',function(){
+submitBtnElement.addEventListener('click',function(){
   if(inp.value !== ''){
     const li = document.createElement('li')
     li.textContent = inp.value
@@ -10,3 +10,11 @@ btnElement.addEventListener('click',function(){
     ulElement.appendChild(li)
   } 
 })
+
+const resetBtnElement = document.getElementById('reset-button')
+
+resetBtnElement.addEventListener('click',function(){
+  inp.value = null
+  document.querySelector('ul').innerHTML=''
+})
+
