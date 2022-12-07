@@ -18,3 +18,8 @@ resetBtnElement.addEventListener('click',function(){
   document.querySelector('ul').innerHTML=''
 })
 
+ulElement.addEventListener('click',function(evt){
+  //console.log(evt)
+  evt.target.remove()
+})
+
